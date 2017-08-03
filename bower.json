@@ -1,0 +1,21 @@
+{
+  "name": "ticket-booking",
+  "description": "Small description for ticket-booking goes here",
+  "main": "",
+  "authors": [
+    "John Victor <vjohnvictor@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/johnvictor/ticket-booking",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
