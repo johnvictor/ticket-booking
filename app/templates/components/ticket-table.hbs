@@ -1,0 +1,26 @@
+<span class="label label-primary">Book your tickets</span>
+
+<div class="seat-table">
+
+	{{#each seats as |seat index|}}
+		{{#if (eq index 4)}}
+			<div style="margin-top:35px;"></div>
+		{{/if}}
+		<div class="row">
+			<div class="col-xs-1 rownum">
+				<label>{{seat.row}}</label>
+			</div>
+
+			{{#each seat.columns as |column|}}
+				<div class="col-xs-1">
+		  		<button {{action 'selectSeat' column}} class="button {{if column.isSelected 'selected'}} {{if column.isBooked 'booked'}}">{{column.no}}</button>
+		  	</div>
+			{{/each}}
+		</div>
+
+	{{/each}}
+
+</div>
+
+<button type="button" class="btn btn-danger" {{action 'reset'}}>Reset</button>
+<button type="button" class="btn btn-success" {{action 'book'}}>book</button>
